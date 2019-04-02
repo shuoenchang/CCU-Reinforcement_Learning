@@ -23,7 +23,7 @@ for eps=1:ELP_COUNT     % loop for different epsilon
         for step=1:N_STEP   % loop for step in each bandit
             if(rand(1) < epsilon)   % if rand(1)<epsilon 
                 choose = unidrnd(K_ARM);    % random choose arms
-            else    % else
+            else 
                 [value, choose] = max(q_estimate);  % choose arms from estimated reward
             end
             reward = normrnd(q_star(bandit, choose), 1);    % reward in this step (from arm choosen before)
