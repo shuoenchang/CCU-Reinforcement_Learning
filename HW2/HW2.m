@@ -32,7 +32,7 @@ while(1)
             state_values(x, y) = value; % update state values at (x,y)
         end
     end
-    if(abs(sum(state_values-old_state_values)) < DELTA) 
+    if(sum(abs(state_values-old_state_values)) < DELTA) 
         break;  % converge
     end
     if(iteration == 1 || iteration == 2 || iteration == 3 || iteration == 10)
